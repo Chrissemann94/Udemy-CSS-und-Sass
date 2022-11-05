@@ -1,0 +1,99 @@
+
+
+
+/* CSS RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/*Style*/
+
+html{
+    height: 100%;
+    background-image: url("../img/pexels-pixabay-45230.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* ignoriert Scroll */
+
+    font-family: 'Dosis', sans-serif
+}
+
+.header {
+    text-align: center;
+}
+
+.main {
+    text-align: center;
+    color: white;
+    
+}
+
+.main--heading {
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 200px;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    /* filter: invert(); invertiert Farbe */
+    transform: translate(-60vw, 0);
+    animation: logo-fly-in 4s ease-in-out 0s 1 both,
+        logo-turbulences 15s ease-in-out 4.5s infinite none;
+}
+
+@keyframes logo-fly-in {
+    0% {
+        opacity: 0;
+        transform: translate(-60vw, 0);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes logo-turbulences {
+    0%, 100% {
+        transform: translate(0, 0), scale(1);
+    }
+    25% {
+        transform: translate(0, -10px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    75% {
+        transform: translate(0, 5px), scale(1.1);
+    }
+}
+
+.button {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(135, 111, 96);
+    padding: 10px 20px 10px 20px; /*oben rechts unten links*/
+    display: inline-block; /* links sind Inline-Elemente, nicht Block */
+    border-radius: 10000px; /*übertrieben hohe Zahl zum kompletten abrunden*/
+
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    background-color: rgb(36, 29, 25);
+    /* transition: all 0s  --> überschreibt transition von button, aber nicht beim Maus rausgehen */
+}
+
+/* NOTIZEN */
+
+/* transtion-timing-function: cubic-bezier() für genaue Kontrolle der Animation*/
+/* animation-name: vergibt Namen für keyframes*/
+/* animation-iteration-count: wie oft die Animation wiedergegeben wird */
+/* animation-fill-mode: both; --> springt direkt in Keyframes */
+
+/* animation: name, duration, timing-function, delay, iteration-count, direction, fill-mode, play-state */
+/*transform, opacity gut für Animationen geeignet, im Gegensatz zu bspw. margin , font oder color*/

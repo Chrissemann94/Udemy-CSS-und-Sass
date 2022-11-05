@@ -1,0 +1,20 @@
+background-color < background-image
+
+Im Idealfall nutzen Animationen CSS-Befehle aus dem Compositing-Berreich
+
+Sollten mehrere CSS-Regeln im Widerspruch zueinander stehen, wird die anzuwendende REgel wie folgt ermittlelt:
+1. Wichtigkeit (!important, ...)
+2. Spezifität
+3. Platzierung (im Quellcode, je weiter unten, umso bevorzugter)
+
+best practice vermeidet !important und Inline-Styles. gearbeitet wird mit der Spezifität
+
+Spezifität: Inline-Style > Anzahl der IDs > Anzahl der Klassen, Pseudoklassen und Attribute > Elemente, Pseudoelemente
+
+- www.w3.org
+
+.html font-size auf 62.5% setzen, um 10px zu erhalten und mit em besser arbeiten zu können.
+rem als best practice empfohlen, in ausnahmefällen vh oder %
+
+padding ist klickbar, margin nicht!
+

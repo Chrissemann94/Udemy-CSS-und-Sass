@@ -88,12 +88,3 @@ html{
     /* transition: all 0s  --> überschreibt transition von button, aber nicht beim Maus rausgehen */
 }
 
-/* NOTIZEN */
-
-/* transtion-timing-function: cubic-bezier() für genaue Kontrolle der Animation*/
-/* animation-name: vergibt Namen für keyframes*/
-/* animation-iteration-count: wie oft die Animation wiedergegeben wird */
-/* animation-fill-mode: both; --> springt direkt in Keyframes */
-
-/* animation: name, duration, timing-function, delay, iteration-count, direction, fill-mode, play-state */
-/*transform, opacity gut für Animationen geeignet, im Gegensatz zu bspw. margin , font oder color*/

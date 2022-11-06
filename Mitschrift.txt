@@ -1,4 +1,25 @@
+/* NOTIZEN */
+
+
+Grundlagen: 
+-----------
+
+transtion-timing-function: cubic-bezier() für genaue Kontrolle der Animation
+animation-name: vergibt Namen für keyframes
+animation-iteration-count: wie oft die Animation wiedergegeben wird
+animation-fill-mode: both; --> springt direkt in Keyframes
+
+animation: name, duration, timing-function, delay, iteration-count, direction, fill-mode, play-state 
+transform, opacity gut für Animationen geeignet, im Gegensatz zu bspw. margin , font oder color
+
+background: image, position/size, repeat, origin, clip, attachment, color
+farbe MUSS unterste Ebene sein, sonst ungültiger code
+
 background-color < background-image
+
+
+Fotrgeschritten:
+----------------
 
 Im Idealfall nutzen Animationen CSS-Befehle aus dem Compositing-Berreich
 
@@ -17,4 +38,13 @@ Spezifität: Inline-Style > Anzahl der IDs > Anzahl der Klassen, Pseudoklassen u
 rem als best practice empfohlen, in ausnahmefällen vh oder %
 
 padding ist klickbar, margin nicht!
+width und height wirkt sich NUR auf den content aus, NICHT auf padding, border und margin!
+LÖSUNG: box-sizing: border-box
+
+Mit float lassen sich elemente nebeneinander anzeigen.
+
+In CHROME RK-->Untersuchen und dann auf das Smartphone-Icon klicken, um die Bildschirmgröße eines Smartphones zu simulieren
+
+
+für @media float auf none bzw. initial setzen, um elemente bei kleinerem bildschirm untereinander anzuzeigen
 

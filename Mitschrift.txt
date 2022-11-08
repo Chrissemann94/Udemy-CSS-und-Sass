@@ -18,12 +18,13 @@ farbe MUSS unterste Ebene sein, sonst ungültiger code
 background-color < background-image
 
 
-Fotrgeschritten:
+Fortgeschritten:
 ----------------
 
-Im Idealfall nutzen Animationen CSS-Befehle aus dem Compositing-Berreich
+- Im Idealfall nutzen Animationen CSS-Befehle aus dem Compositing-Berreich
 
-Sollten mehrere CSS-Regeln im Widerspruch zueinander stehen, wird die anzuwendende REgel wie folgt ermittlelt:
+
+- Sollten mehrere CSS-Regeln im Widerspruch zueinander stehen, wird die anzuwendende REgel wie folgt ermittlelt:
 1. Wichtigkeit (!important, ...)
 2. Spezifität
 3. Platzierung (im Quellcode, je weiter unten, umso bevorzugter)
@@ -32,19 +33,38 @@ best practice vermeidet !important und Inline-Styles. gearbeitet wird mit der Sp
 
 Spezifität: Inline-Style > Anzahl der IDs > Anzahl der Klassen, Pseudoklassen und Attribute > Elemente, Pseudoelemente
 
-- www.w3.org
 
-.html font-size auf 62.5% setzen, um 10px zu erhalten und mit em besser arbeiten zu können.
-rem als best practice empfohlen, in ausnahmefällen vh oder %
+- www.w3.org für Docs
 
-padding ist klickbar, margin nicht!
-width und height wirkt sich NUR auf den content aus, NICHT auf padding, border und margin!
+- .html font-size auf 62.5% setzen, um 10px zu erhalten und mit em besser arbeiten zu können.
+- rem als best practice empfohlen, in ausnahmefällen vh oder %
+
+- padding ist klickbar, margin nicht!
+- width und height wirkt sich NUR auf den content aus, NICHT auf padding, border und margin!
 LÖSUNG: box-sizing: border-box
 
-Mit float lassen sich elemente nebeneinander anzeigen.
+- Mit float lassen sich elemente nebeneinander anzeigen.
 
-In CHROME RK-->Untersuchen und dann auf das Smartphone-Icon klicken, um die Bildschirmgröße eines Smartphones zu simulieren
+- In CHROME RK-->Untersuchen und dann auf das Smartphone-Icon klicken, um die Bildschirmgröße eines Smartphones zu simulieren
 
 
-für @media float auf none bzw. initial setzen, um elemente bei kleinerem bildschirm untereinander anzuzeigen
+- für @media float auf none bzw. initial setzen, um elemente bei kleinerem bildschirm untereinander anzuzeigen
+
+- Position:
+position: relative positioniert relativ zu seiner Position gebracht
+fixed: relativ zum viewport, selbst, wenn gescrollt wird, sollte vermieden werden
+sticky: wechselt zwischen relative und fixed, je nachdem, wie der user gescrollt hat
+absolute: element wird aus dem textfluss herausgehoben und relativ zum nächsten eltern-element mit positionierung positioniert, ansonten
+absolut zur Seite, kann mit top, left, right, bottom kombiniert werden.
+
+- z-Index:
+bei position relative oder absolute anwendbar. je höher der wert, desto weiter im vordergrund
+reihenfolge im Code entscheidet bei gleichem z-index. Standardwert: 0
+
+- webp als bildformat für transparenz, photoshop benötigt ein plugin
+
+- calc() zum kombinieren mehrerer Größeneinheiten (rem, vw, %, etc.)
+
+
+
 

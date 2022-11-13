@@ -66,6 +66,7 @@ reihenfolge im Code entscheidet bei gleichem z-index. Standardwert: 0
 - calc() zum kombinieren mehrerer Größeneinheiten (rem, vw, %, etc.)
 
 - Externe Schriftarten in CSS:
+- -----------------------------
 Zunächst: Google Fonts, aber Datenschutzrechtlich problematisch
 font-weight: lighter, normal, bold, etc. können nicht animiert werden, außer, man bindet sie selbst ein.
 Formate: SVG, EOT (beide veraltet), OTF/TTF hat große Dateien, WOFF (Web Open Font Format) bzw. WOFF2
@@ -89,6 +90,10 @@ Schriftart erstellen Bsp.:
 Schriftarten komprimmieren: 
 NICHT mit Online-Converter! unterstützt Variable Width nicht
 google --> woff2 github (GEHT LEIDER NUR AUF macOS und LINUX)
+
+
+- SASS/SCSS:
+-----------
 
 
 

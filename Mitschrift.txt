@@ -95,7 +95,44 @@ google --> woff2 github (GEHT LEIDER NUR AUF macOS und LINUX)
 - SASS/SCSS:
 -----------
 
+übersichtlicher CSS-Code, Verschachtelung von Regeln und Media Querys
+CSS auf verschiedene Dateien aufteilen ohne längere Ladezeiten
+wiederverwendbare Funktionen
+SCSS wird von SASS in CSS umgewandelt
+SCSS ist ein Dateiformat mit zusätzlichen features zu CSS
+SASS: Einrückungen wichtig, da keine geschweiften Klammern oder Semikolons genutzt werden können
 
+Implementierugen:
+    LibSass in C
+    Ruby Sass (veraltet)
+    Dart Sass
 
+in powershell:
+--watch als Endung beim Kompilieren, um automatisch zu speichern
+Danach auf keinen Fall Änderungen direkt im CSS machen
 
+Selektoren kombinieren: Kindelemente können ins Parent-Element geschrieben werden
+&, um Leerzeichen zu umgehen bei Pseudoelementen (z.B.: &:hover)
+    Funktionert auch bei Namen mit Fortsatz = Modifier 
 
+SCSS in verschiedene Dateien aufteilen: 
+Unterstrich am Anfang, um Datei als partial zu kennzeichnen
+@use zum Einbinden von Partial Dateien, Unterstrich dabei weglassen
+_index benannte Dateien müssen nicht im Pfad angegeben werden
+Wichtig: use@ muss am Anfang der SCSS-Datei stehen
+
+main.css.map zum Anzeigen von SCSS-Infos im Browser
+
+Pfade müssen sich am .css orientieren, NICHT am .scss
+
+SASS-Projekt strukturieren: 
+    in /styles:
+        /abstracts: Mixins, Funktionen und Platzhalter
+        /base: grundlegende Styles wie CSS-Reset oder Schriftarten
+        /components: kleine Componenten wie buttons oder Formulare
+        /layout: allgemeines layout
+
+        /pages: Code für einzelne Seiten
+        /themes: Code für verschiedene themes
+        /vendors: CSS-Code von anderen Projekten (z.B.: Frameworks wie Bootstrap, Bulma, etc.)
+        main.scss: zum Einbinden der einzelnen Ordner

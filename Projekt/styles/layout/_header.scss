@@ -1,0 +1,135 @@
+
+
+.header {
+    height: 35rem;  /* Schriftgröße * rem = 640px */
+    min-height: calc(13rem + 32vw);       /* für responsive Design große Bildschirme */
+    position: relative;
+    overflow: hidden;  
+
+    /* 1200px oder schmaler */
+    @media (max-width: 75em) {
+        height: calc(15rem + 32vw);
+    }
+}
+
+/*@media (max-width: 112.5em) {
+    header {
+        min-height: 45vw;
+    }
+} */
+
+
+.header__container {
+    position: relative;
+}
+
+.header__slope {
+    position: absolute;
+    left: 0;        /* left: 0 und right: 0 in Kombination macht die width zu 100% */
+    right: 0;
+    bottom: 0;
+    height: 10vw;
+
+    background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%);
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-size: 100vw 10vw;
+    z-index: 1;
+}
+
+.header::before,
+.header::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    bottom: -9rem;
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+
+    @media (max-width: 75em) {
+            bottom: -4rem;
+        }
+
+        @media (max-width: 62em) {
+               bottom: -1rem;
+        }
+}
+
+.header::before {
+    top: 0;
+
+    background-image:  url("../images/pexels-benjamin-suter-3617500.jpg"); 
+
+    @media (max-width: 36em) {
+        background-size: cover;
+    }
+}
+
+.header::after {
+    height: 33vw;
+
+    background-image: url("../images/pexels-benjamin-suter-3617500-mountains.webp"); 
+
+    @media (max-width: 36em) {
+        display: none;
+    }
+}
+
+.header__heading-container {
+    clear: both;            /*bereinigt float des navbar, wodruch das Element darunter platziert wird*/
+}
+
+.header__heading-main {
+    font-weight: 700;
+
+    padding-top: 5rem;
+    line-height: 92%; 
+    font-size: 7rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+
+    animation-name: header__heading-main-font-weight;
+    animation-delay: 0.75s; /* damit die Seite davor geladen wird */
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both; /* übernimmmt Eigenschaften aus den keyframes*/
+
+    @media (max-width: 62em) {
+            font-size: 4rem;
+        }
+    @media (max-width: 48em) {
+            font-size: 3rem;
+    }
+}
+
+@keyframes header__heading-main-font-weight {
+    0%{
+        opacity: 0;
+        font-weight: 100;
+    }
+    100% {
+        opacity: 1;
+        font-weight: 700;
+    }
+}
+
+.header__heading-sub {
+    margin-top: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-size:1.5rem;
+    letter-spacing: 0.5rem;  /*Abstand der einzelnen Buchstaben in Text*/
+    text-align: center;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: relative;
+
+    @media (max-width: 48em) {
+            font-size: 1rem;
+    }
+}
+

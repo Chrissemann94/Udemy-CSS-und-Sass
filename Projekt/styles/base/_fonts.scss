@@ -1,0 +1,22 @@
+/* Schriftart einbinden */
+/* -------------------- */
+    
+    /* Schriftart normal */
+    @font-face{
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 100 900; /* -> Schriftdickenbereich für Variable Fonts 
+        font-display: swap; /* --> Inhalt soll angezeigt werden, falls Schrift noch nicht geladen wurde */
+        src: url("../fonts/jost/Jost-Italic-VariableFont_wght.woff2") format("woff2");
+    }
+    
+        /* Schriftart italic */
+    @font-face{
+        font-family: "Jost";
+        font-style: italic;
+        font-weight: 100 900; /* -> Schriftdickenbereich für Variable Fonts 
+        font-display: swap; /* --> Inhalt soll angezeigt werden, falls Schrift noch nicht geladen wurde */
+        src: url("../fonts/jost/Jost-Italic-VariableFont_wght.woff2") format("woff2");
+    }
+    
+    /* --> Bei Fonts ohne Variable Width seperate src einbinden */
